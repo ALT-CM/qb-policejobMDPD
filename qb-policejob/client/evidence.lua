@@ -239,7 +239,7 @@ CreateThread(function()
         Wait(1)
         if CurrentCasing and CurrentCasing ~= 0 then
             local pos = GetEntityCoords(PlayerPedId())
-            if #(pos -vector3(Casings[CurrentCasing].coords.x, Casings[CurrentCasing].coords.y, Casings[CurrentCasing].coords.z)) < 1.5 then
+            if #(pos -vector3(Casings[CurrentCasing].coords.x, Casings[CurrentCasing].coords.y, Casings[CurrentCasing].coords.z)) < 9.0 then
                 DrawText3D(Casings[CurrentCasing].coords.x, Casings[CurrentCasing].coords.y, Casings[CurrentCasing].coords.z, '~g~G~w~ - Bullet sleeve ~b~#' .. Casings[CurrentCasing].type)
                 if IsControlJustReleased(0, 47) then
                     local s1, s2 = GetStreetNameAtCoord(Casings[CurrentCasing].coords.x, Casings[CurrentCasing].coords.y, Casings[CurrentCasing].coords.z)
@@ -265,7 +265,7 @@ CreateThread(function()
         if CurrentBlooddrop and CurrentBlooddrop ~= 0 then
             local pos = GetEntityCoords(PlayerPedId())
             if #(pos - vector3(Blooddrops[CurrentBlooddrop].coords.x, Blooddrops[CurrentBlooddrop].coords.y,
-                Blooddrops[CurrentBlooddrop].coords.z)) < 5 then
+                Blooddrops[CurrentBlooddrop].coords.z)) < 9.0 then
                 DrawText3D(Blooddrops[CurrentBlooddrop].coords.x, Blooddrops[CurrentBlooddrop].coords.y, Blooddrops[CurrentBlooddrop].coords.z, '~g~G~w~ - Blood ~b~#' .. DnaHash(Blooddrops[CurrentBlooddrop].citizenid))
                 if IsControlJustReleased(0, 47) then
                     local s1, s2 = GetStreetNameAtCoord(Blooddrops[CurrentBlooddrop].coords.x, Blooddrops[CurrentBlooddrop].coords.y, Blooddrops[CurrentBlooddrop].coords.z)
